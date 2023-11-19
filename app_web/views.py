@@ -1,3 +1,6 @@
+from django.http import HttpResponse, Http404
+from django.conf import settings
+import os
 # get_object_or_404: es para enviar un mensaje de error en la pagina
 # render: funciona para enviar un archivo html
 # redirect: funciona para redireccionar, usando el name correspondido en la URL
@@ -125,7 +128,16 @@ def detalles_tarea_alumno(request, id_materia):
             'form': form,
             'a':a
         })       
-      
+def download(request, path):
+    # get the download path
+    download_path = os.path.join(settings.MEDIA_ROOT, path)
+    if os.path.exists(download_path):
+         with open(download_path, "rb") as fh:
+             response = HttpResponse(fh.read(), content_type="application/archivos")
+             response["Content-Disposition"] = "inline; filename=" + os.path.basename(
+                 download_path
+             )
+             return response      
    
 # -------------------------------------------------------  
       
