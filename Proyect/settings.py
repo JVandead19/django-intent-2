@@ -132,6 +132,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
