@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Website with a contact Form 01</title>
+    <link rel="stylesheet" href="{% static 'estilos/notas_notas.css' %}" />
+    <!-- GOOGLE FONTs -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- ANIMATE CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+  </head>
+  <body>
+    <section id="primero">
+      <div class="container">
+        <h1 class="logo">Notas <span>Primer lapso</span></h1>
+
+        <div class="contact-wrapper animated bounceInUp">
+          <div class="contact-form">
+          
+
+            {% for notas_1erlapso in notas_1erlapso %}
+            
+              <form action="">
+
+                  <ul>
+
+                    <h1 style="font-size: 25px;">{{notas_1erlapso.materia}}</h1>
+                      <li>{{notas_1erlapso.definitiva}}</li>
+                      <hr>
+      
+                  </ul>
+
+              </form>
+
+            {% endfor %}       
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segundo formulario inicio-->
+    <section id="segundo">
+
+      <div class="container">
+        <h1 class="logo">Notas <span>Segundo lapso</span></h1>
+
+        <div class="contact-wrapper animated bounceInUp">
+          <div class="contact-form">
+      
+            <form action="">
+              <ul>
+
+                {% for notas_2dolapso in notas_2dolapso %}
+                
+                <h1 style="font-size: 25px;">{{notas_2dolapso.materia}}</h1>
+                  <li>{{notas_2dolapso.definitiva}}</li>
+                  <hr>
+              
+                        
+                {% endfor %}
+
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!---Tercer formulario-->
+    <section id="tercero">
+      <div class="container">
+        <h1 class="logo">Notas <span>Tercer lapso</span></h1>
+
+        <div class="contact-wrapper animated bounceInUp">
+          <div class="contact-form">
+          
+            <form action="">
+              <ul>
+
+                {% for notas_3erlapso in notas_3erlapso %}
+                
+                  <h1 style="font-size: 25px;">{{notas_3erlapso.materia}}</h1>
+                  <li>{{notas_3erlapso.definitiva}}</li>
+                  <hr>
+              
+                        
+                {% endfor %}
+
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!-- 'load static, funciona para cargar archivos estaticos' -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socorro Gonzalez Guinan</title>
+    <link rel="stylesheet" href="{% static 'estilos/estiloMenu1.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="btn-menu">
+          <label for="btn-menu">☰</label>
+        </div>
+        <div class="logo">
+          <h1>Unidad educativa Socorro Gonzalez Guinan</h1>
+        </div>
+        <nav class="menu">
+          <a href="{% url 'logout' %}">Cerrar sesiòn</a>
+        </nav>
+      </div>
+    </header>
+    <div class="capa"></div>
+    <!--	--------------->
+    <input type="checkbox" id="btn-menu" />
+    <div class="container-menu">
+      <div class="cont-menu">
+        <nav>
+
+          {% for materias_alumno in materias_alumno %}
+          <a href="{% url 'aulas' materias_alumno.c_año_escolar_id %}">Aula virtual</a>
+          <a href="{% url 'calificaciones' %}">Calificaciones</a>
+          {% endfor %}
+
+          {% for x in x %}
+          {% if x.user_id == request.user %}
+
+          <a href="{% url 'aula' %}">Aula Virtual</a>
+          {% endif%}
+          
+          {% endfor %}
+
+          {% for datos_estudiante in datos_estudiante %}
+          <a href="{% url 'perfil' datos_estudiante.userr_id %}">Mi perfil</a>
+          {% endfor %}
+
+        </nav>
+        <label for="btn-menu">✖️</label>
+      </div>
+    </div>
+  </body>
+</html>

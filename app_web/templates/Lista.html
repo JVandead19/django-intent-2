@@ -1,0 +1,59 @@
+<!-- 'load static, funciona para cargar archivos estaticos' -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socorro Gonzalez Guinan</title>
+    <link rel="stylesheet" href="{% static 'estilos/lista_lista.css' %}" />
+  </head>
+  <body>
+    <!--encabezado inicio-->
+
+    <header class="header">
+        
+
+        
+
+      <div class="logo">
+        <img src="{% static 'img/WhatsApp Image 2023-11-15 at 10.54.34 AM.jpeg' %}" alt="">
+        <h1>Unidad educativa Socorro Gonzalez Guinan</h1>
+      </div>
+
+      <nav>
+          <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'sign_in' %}">Iniciar sesión</a></li>
+          </ul>
+      </nav>
+
+    
+
+  </header>
+
+    <section id="imagen">
+      <div class="container">
+
+        <div class="img-container"></div>
+
+      </div>
+
+    </section>
+
+    
+    <footer class="pie">
+      
+      
+      <div class="derechos">
+
+        <p>Copyright©2023Informatica Studios. All right reserved</p>
+        <p>Privacy Policy Terms and conditions</p>
+
+      </div>
+
+
+  </footer>
+  </body>
+</html>

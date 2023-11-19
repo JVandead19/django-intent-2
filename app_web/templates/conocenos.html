@@ -1,0 +1,209 @@
+<!-- 'load static, funciona para cargar archivos estaticos' -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socorro Gonzalez Guinan</title>
+    <link rel="stylesheet" href="{% static 'estilos/styles_conocenos.css' %}" />
+    <link rel="stylesheet" href="{% static 'enlaces/reloj.js' %}" />
+    
+  </head>
+
+  <body>
+    <div class="capa">
+      <!--encabezado inicio-->
+
+      <header class="header">
+        
+
+        
+
+          <div class="logo">
+            <img src="{% static 'img/WhatsApp Image 2023-11-15 at 10.54.34 AM.jpeg' %}" alt="">
+            <h1>Unidad educativa Socorro Gonzalez Guinan</h1>
+          </div>
+
+          <nav>
+              <ul class="nav-links">
+                <li><a href="{% url 'sign_in' %}">Iniciar sesión</a></li>
+                <li><a href="{% url 'lista' %}">Informacion de inscripción</a></li>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+              </ul>
+          </nav>
+
+        
+
+      </header>
+    </div>
+
+    <section id="historia">
+      <div class="container">
+
+        <div class="img-container"></div>
+
+        <div class="texto">
+          <h2>HISTORIA</h2>
+          <br>
+          <p>La Unidad Educativa Instituto “SOCORRO GONZÁLEZ GUINÁN” fue
+            fundada en el año 1986 por las Licenciadas Elsi J. González M. y Luisa A. Núñez
+                M., desde sus inicios ha estado funcionando en la parroquia de San Blas frente a
+                la Iglesia, en la sede donde funcionaba antiguamente el correo en Valencia.
+                Cabe destacar entre otros que, el instituto ha logrado durante estos 36 años de
+                funcionamiento, ser parte de la formación de jóvenes de ésta comunidad y de
+                otras partes de nuestro estado Carabobo, algunos con limitaciones visuales total,
+                con impedimentos físico motoras y auditivas, dándoles la oportunidad de
+                incorporarse al sistema regular educativo, bajo la supervisión tutorial del grupo
+                integrado de la Universidad de Carabobo, los cuales ofrecen talleres dirigidos a los
+                docentes, para el trato especial a estos jóvenes y otros becados por nuestra
+                institución por no tener las condiciones económicas mínimas, pero con muchas
+                ganas de estudiar</p>
+
+        </div>      
+      </div>
+    </section>
+
+    <section id="mision_vision">
+      <div class="container">
+
+        <div class="cart">
+          <div class="carta">
+
+            <h2>VISIÓN</h2>
+            <P>Impartir una educación integral de calidad orientada hacia la excelencia, garante
+              del desarrollo pleno de la personalidad y al logro de la transformación de un
+              hombre y una mujer que este soportado en inquebrantables valores espirituales,
+              morales y sociales que influyan de una manera positiva en el contexto social y
+              cultural de las generaciones futuras</P>
+          </div>
+
+          <div class="carta">
+            <h2>MISIÓN</h2>
+            <P>Participar en el proceso de Formación Educativa en el nivel de Educación Media
+              General inspirados en los Principios Fundamentales de la Educación, logrando la
+              capacitación de jóvenes Responsables, Comprometidos con su crecimiento
+              Personal y el de su Comunidad, propia de un ciudadano apto para desenvolverse
+              en una sociedad libre y democrática.</P>
+          </div>
+        </div>
+       
+
+      </div>
+    </section>
+
+    <section id="valores">
+      <div class="container">
+
+        <div class="img-container"></div>
+
+        <div class="lista">
+          <h2 >NUESTROS VALORES</h2>
+          <br>
+          <ul>
+            <li>✔️ ÉTICA</li>
+            <br>
+            <li>✔️ RESPONSABILIDAD</li>
+            <br>
+            <li>✔️ TOLERANCIA</li>
+            <br>
+            <li>✔️ EFICIENCIA</li>
+            <br>
+            <li>✔️ SOLIDARIDAD</li>
+          </ul>
+
+        </div>
+
+        <div class="mapa">
+
+          <h2 style="color: white;">UBICACIÓN</h2>
+          <br>
+          <div class="center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7853.900606670679!2d-67.99859599059299!3d10.184691409553134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e80679cec84e843%3A0x7f1436f2b7c35ae8!2sParroquia%20Urbana%20San%20Blas%2C%20Valencia%202001%2C%20Carabobo!5e0!3m2!1ses!2sve!4v1692660107625!5m2!1ses!2sve"
+              width="600"
+              height="450"
+              style="border-radius: 10px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="directivo">
+      <div class="container">
+        
+        <!--   Tarjetas-->
+        <div>
+          <center><h2 style="color: white;">Conozca a nuestro  Directivos </h2></center>
+        </div>
+        <div class="container-card">
+          <div class="card">
+            <figure>
+              <img
+                src="{% static 'img/Ana García-Siñeriz, nueva directora de Condé Nast College, Medios _ Control Publicidad (1).jpg' %}"
+              />
+            </figure>
+            <div class="contenido-card">
+              <h3>Subdirectora</h3>
+              <p>Adriana Gonzalez</p>
+              <p>Lincenciada en educacion</p>
+    
+              
+            </div>
+          </div>
+          <div class="card">
+            <figure>
+              <img
+                src="{% static 'img/Patricia Estupiñán.jpg' %}"
+              />
+            </figure>
+            <div class="contenido-card">
+              <h3>Directora</h3>
+              <p>Elsi Gonzalez</p>
+              <p>Lincenciada en educacion</p>
+    
+              
+            </div>
+          </div>
+          <div class="card">
+            <figure>
+              <img
+                src="{% static 'img/Imagen Ejecutiva.jpg' %}"
+              />
+            </figure>
+            <div class="contenido-card">
+              <h3>Coordinadora </h3>
+              <p>Aura Flores</p>
+              <p>Lincenciada en pedagogia</p>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    
+
+     <footer class="pie">
+      
+      
+        <div class="derechos">
+
+          <p>Copyright©2023Informatica Studios. All right reserved</p>
+          <p>Privacy Policy Terms and conditions</p>
+
+        </div>
+
+  
+    </footer>
+    
+  </body>
+</html>

@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 20px;
+}
+h2{font-size: 1.75em;}
+p{font-size: 1.20em;}
+ul{list-style: none;}
+li{font-size: 1.30em;}
+
+body {
+  background: url("img/school-photo-background-ff9yp384p1x4762x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 20em;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+
+}
+
+#login .container{
+  display: flex;
+  text-align: center;
+  padding: 100px 12px;
+  justify-content: center;
+}
+form {
+  padding-top: 20px;
+  width: 350px;
+  height: 400px;
+  background-color: black;
+
+  margin: 50px auto;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  padding: 5px 10%;
+}
+
+.logo img {
+  height: 54px;
+  width: 60px;
+  clip-path: circle(50% at 50% 50%);
+  margin-bottom: -65px;
+  margin-left: -70px;
+}
+
+.logo h1 {
+  font-size: 700;
+  color: #eceff1;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+
+.header .nav-links {
+  float: right;
+  line-height: 90px;
+}
+
+.header .nav-links li {
+  
+  display: inline-block;
+  padding: 0 20px;
+  margin-top: 58px;
+  line-height: normal;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  font-size: 10px;
+  
+}
+
+.header .nav-links li:hover {
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+
+.header .nav-links a {
+  font-size: 700;
+  color: #eceff1;
+  text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+  color: #ffbc0e;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px;
+  display: flex;
+  margin: 10px auto;
+}
+
+label {
+  color: white;
+  display: block;
+
+  text-align: center;
+  margin: 15px;
+
+  font-size: 20px;
+}
+
+input[type="button"] {
+  width: 100px;
+  margin-top: 20px;
+  font-size: 20px;
+  display: block;
+  background-color: chocolate;
+}
+
+input[type="button"]:hover {
+  background-color: coral;
+}

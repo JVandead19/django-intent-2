@@ -1,0 +1,60 @@
+<!-- 'load static, funciona para cargar archivos estaticos' -->
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docente</title>
+    <link rel="stylesheet" href="{% static 'estilos/login_docent.css' %}" />
+  </head>
+
+  <body>
+    <section id="login_docent">
+      <div class="container">
+        <form method="POST" class="text-center">
+
+          {% csrf_token %}
+
+          <h1>Inicia sesión</h1>
+          
+
+          <label for="username">Usuario: </label>
+          <input
+            type="text"
+            placeholder=" &#129333; Ingrese su usuario: "
+            id="username" name="username"
+          />
+
+          <label for="password">Contraseña: </label>
+          <input
+            type="password"
+            placeholder=" &#128272; Ingrese su clave"
+            id="password" name="password"
+          />
+
+          
+
+          <center>
+            <button style="background-color: chocolate;width: 100px; height: 50px;
+            margin-top: 20px;
+            font-size: 20px;
+            display: block; 
+            ">
+              Iniciar
+            </button>
+          </center>
+          <h1 style="color: red;">{{error}}</h1>
+        
+        
+
+      
+
+        </form>
+      </div>  
+    </section>
+  </body>
+</html>
+
