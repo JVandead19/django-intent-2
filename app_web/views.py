@@ -180,7 +180,7 @@ def Materia(request, id_materia):
         # Otro metodo de hacerlo, guardamos los datos que estan en el form
         try:
             form = Aggconten_materia(request.POST or None, request.FILES or None)
-            new_tarea = form.save
+            new_tarea = form.save(commit=False)
             # con esto 'new_tarea.user = request.user' comprobamos a que usuario le va a pertencer la tarea, revisando la sesion en la cookie
             new_tarea.user = request.user 
             new_tarea.save()
